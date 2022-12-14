@@ -5,22 +5,22 @@
 int[] FillArray(int size, int minValue, int maxValue)
 {
     int[] array = new int[size];
-    for (int i=0; i<size; i++)
+    for (int i = 0; i < size; i++)
     {
-        array[i]= new Random().Next(minValue,maxValue);
+        array[i] = new Random().Next(minValue, maxValue);
     }
-    Console.WriteLine(String.Join(" ",array));
+    Console.WriteLine(String.Join(" ", array));
     return array;
 }
 void ShowEvenNumbers(int[] array)
 {
-    int count=0;
-    for (int i=0; i<array.Length; i++) 
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
     {
-        if (array[i]%2==0) count++;
+        if (array[i] % 2 == 0) count++;
     }
     Console.WriteLine("Количество четных чисел в массиве :" + count);
 }
 
 Console.Clear();
-ShowEvenNumbers(FillArray(20,100,1000));
+ShowEvenNumbers(FillArray(20, 100, 1000));
